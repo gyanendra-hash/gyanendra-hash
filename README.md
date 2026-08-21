@@ -1,68 +1,75 @@
 <h1 align="center">Hi 👋, I'm Gyanendra Pratap Singh</h1>
-<h3 align="center">A Passionate Backend Developer & Data Engineer from India</h3>
+<h3 align="center">Backend Developer — Python, Django, FastAPI & Distributed Systems</h3>
 
 <p align="left"> 
   <img src="https://komarev.com/ghpvc/?username=gyanendra-hash&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" /> 
 </p>
 
-<p align="left"> 
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=gyanendra-hash" alt="GitHub trophies" />
-  </a> 
-</p>
+---
+
+## About Me
+
+I build backend systems and APIs — from multi-tenant SaaS platforms to distributed
+microservices — mostly in Python with Django and FastAPI.
+
+- 🔭 Currently working at **Ednectar**
+- 🌱 Currently deepening my skills in:
+  - Distributed systems fundamentals — rate limiting, task scheduling, leader election
+  - Agentic AI / LLM tool-calling and RAG pipelines
+  - Docker, Redis, and Celery for async/background workloads
+- 👯 Open to collaborating on **backend & SaaS projects (Django / FastAPI)**
+- 🤝 Looking for input on scaling multi-tenant SaaS applications and optimizing
+  Django/FastAPI microservices
+- 💬 Ask me about Python, Django, FastAPI, REST/GraphQL APIs, payment gateway
+  integrations (CC Avenue, Stripe, Razorpay), and Redis-backed real-time systems
+- 📫 Reach me at **gyanendragps666@gmail.com**
 
 ---
 
-## 🔥 About Me  
-- 🔭 I’m currently working on **Ednectar**  
-- 🌱 I’m currently learning:  
-  - Advanced **GraphQL APIs** with Django/FastAPI  
-  - **Docker + Redis + Celery** for async tasks  
-  - **AI integrations** with OpenAI / HuggingFace  
-- 👯 I’m looking to collaborate on **Backend SaaS Projects (Django / FastAPI)**  
-- 🤝 I’m looking for help with:  
-  - Scaling **multi-tenant SaaS applications**  
-  - Optimizing **Django + FastAPI microservices**  
-- 💬 Ask me about:  
-  - **Python, Django, FastAPI**  
-  - REST APIs, GraphQL, SaaS Architectures  
-  - Payment Gateway Integrations (CC Avenue, Stripe, Razorpay)  
-  - Real-time Notifications with WebSockets + Redis  
-- 📫 How to reach me: **gyanendragps666@gmail.com**  
-- ⚡ Fun fact: 💡 I love solving complex backend challenges and turning ideas into **scalable SaaS platforms** 🚀  
+## 💼 Featured Projects
 
----
-## 💼 Highlight Projects  
+### [AgentOps](https://github.com/gyanendra-hash/AgentOps)
+Distributed API gateway, task scheduler, and agentic AI ops layer — a microservice
+platform combining a Redis-backed rate limiter, an API gateway with service
+discovery, a priority- and dependency-aware task scheduler, a worker pool, and a
+LangGraph-based control plane that answers operational questions and debugs
+failures using RAG over system logs and runbooks.
 
-### 🏦 CC Avenue Payment Gateway
-- Implemented AES-encrypted payment flows in FastAPI/Django backend
-- Checkout, success, and cancel flows with secure transaction handling
+- Six independently deployable FastAPI services, each owning its own data store
+- Token Bucket & Sliding Window rate limiting, implemented as atomic Redis Lua
+  scripts and verified under concurrent load with Locust
+- Planned: DAG-based job scheduling (Kahn's algorithm), leader election via Redis,
+  and a pgvector-backed RAG layer for incident debugging
+- **Stack:** FastAPI, Redis, PostgreSQL, pgvector, LangGraph, Docker Compose
 
-### 📊 Education Analytics Data Warehouse
-- ETL pipelines, PostgreSQL DW, FastAPI APIs, Plotly dashboards  
-- [Repo Link](https://github.com/gyanendra-hash/education-analytics)
+### Multi-Tenant SaaS Platform (Django)
+A Django monolith combining multi-tenancy, an LMS module, and a crowdfunding module
+in one codebase, backed by Redis-driven async task processing.
 
-### 💻 Django Combined Project: Multi-Tenant SaaS + LMS + Crowdfunding
-- Practice project combining three apps in Django monolith  
-- Multi-tenancy, LMS, Crowdfunding, Redis, Docker, Async tasks  
-- [Repo Link](https://github.com/gyanendra-hash/django-combined-project)
+- Tenant isolation, LMS, and crowdfunding domains sharing a common Django core
+- Async task handling via Celery + Redis, containerized with Docker
+- *(Private repository)*
 
---- 
+### [Education Analytics Platform](https://github.com/gyanendra-hash/education-analytics)
+A full-stack analytics application for educational institutions: ETL pipelines
+that consolidate multi-source student data into PostgreSQL, a FastAPI backend, and
+interactive Plotly dashboards for real-time, data-driven decisions.
 
-## 🏗️ Architecture & ER Diagrams  
-*(You can add images here from your repo or assets folder)*  
-![Architecture Diagram](assets/education_analytics_architecture.png)  
-![ER Diagram](assets/education_analytics_erd.png)  
+- Microservice-oriented FastAPI backend with dual storage — PostgreSQL for
+  structured data, MongoDB for semi-structured data
+- Automated ETL pipelines and predictive analytics for student outcomes
+- JWT authentication, role-based access control, full Docker Compose setup
+
+### CC Avenue Payment Gateway Integration
+AES-encrypted payment flows built into a Django/FastAPI backend — checkout,
+success, and cancel flows with secure transaction handling end to end.
 
 ---
 
 <h3 align="left">📡 Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/www.linkedin.com/in/gyanendra-pratap-singh" target="blank">
+<a href="https://www.linkedin.com/in/gyanendra-pratap-singh" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin" height="30" width="40" />
-</a>
-<a href="https://instagram.com/gp_siingh" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />
 </a>
 </p>
 
