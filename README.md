@@ -95,4 +95,4 @@ success, and cancel flows with secure transaction handling end to end.
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=gyanendra-hash&show_icons=true&locale=en" alt="GitHub Stats" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=gyanendra-hash&" alt="GitHub Streak" /></p>
+<p><img align="center" src="https://streak-stats.demolab.com/?user=gyanendra-hash&" alt="GitHub Streak" /></p>
