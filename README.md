@@ -17,6 +17,9 @@ microservices — mostly in Python with Django and FastAPI.
   - Distributed systems fundamentals — rate limiting, task scheduling, leader election
   - Agentic AI / LLM tool-calling and RAG pipelines
   - Docker, Redis, and Celery for async/background workloads
+- 📚 Maintaining a private interview-prep knowledge base — DSA, System Design
+  (LLD/HLD: 24 design patterns + 26 real-world systems), and deep-dive
+  Python/Django/DRF/FastAPI tracks, each with theory, diagrams, and working code
 - 👯 Open to collaborating on **backend & SaaS projects (Django / FastAPI)**
 - 🤝 Looking for input on scaling multi-tenant SaaS applications and optimizing
   Django/FastAPI microservices
@@ -30,17 +33,34 @@ microservices — mostly in Python with Django and FastAPI.
 
 ### [AgentOps](https://github.com/gyanendra-hash/AgentOps)
 Distributed API gateway, task scheduler, and agentic AI ops layer — a microservice
-platform combining a Redis-backed rate limiter, an API gateway with service
-discovery, a priority- and dependency-aware task scheduler, a worker pool, and a
-LangGraph-based control plane that answers operational questions and debugs
-failures using RAG over system logs and runbooks.
+platform combining a Redis-backed rate limiter, an API gateway, a priority- and
+dependency-aware task scheduler, a worker pool, and a LangGraph-based control
+plane that schedules jobs, answers operational questions, and debugs failures
+using RAG over system logs and runbooks.
 
 - Six independently deployable FastAPI services, each owning its own data store
-- Token Bucket & Sliding Window rate limiting, implemented as atomic Redis Lua
-  scripts and verified under concurrent load with Locust
-- Planned: DAG-based job scheduling (Kahn's algorithm), leader election via Redis,
-  and a pgvector-backed RAG layer for incident debugging
+- Token Bucket & Sliding Window rate limiting as atomic Redis Lua scripts,
+  verified under concurrent load with Locust; DAG-based job scheduling
+  (Kahn's algorithm) with Redis-backed leader election
+- A pgvector-backed RAG layer for incident debugging, LLM tool-calling with a
+  human-in-the-loop confirmation gate for destructive actions, and intent-routed
+  multi-agent orchestration (schedule / debug / monitor)
+- Five milestones shipped end to end; 157 tests, all run against fakes/mocks —
+  no Docker, downloaded model, or LLM key required to run the suite
 - **Stack:** FastAPI, Redis, PostgreSQL, pgvector, LangGraph, Docker Compose
+
+### [Institute SaaS Backend](https://github.com/gyanendra-hash/institute-saas-backend)
+Multi-tenant Django + DRF backend for coaching institutes — one codebase, many
+institutes, each fully data-isolated at the ORM level.
+
+- Tenant-scoped default model manager enforces isolation automatically — no
+  query can accidentally leak data across tenants
+- JWT auth with tenant + role embedded in the token; students & batches, bulk
+  attendance marking + reports, fee management (Razorpay checkout + async PDF
+  receipts + outstanding-dues reporting), and an exam/result module with
+  auto-calculated rank/average/pass-fail
+- Async notifications via Celery + Redis; free-tier deployable on Render + Neon
+- **Stack:** Django, DRF, PostgreSQL, Redis, Celery, Razorpay, Docker
 
 ### Multi-Tenant SaaS Platform (Django)
 A Django monolith combining multi-tenancy, an LMS module, and a crowdfunding module
